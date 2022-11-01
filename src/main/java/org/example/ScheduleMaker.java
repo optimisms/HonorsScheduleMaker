@@ -1,22 +1,26 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class ScheduleMaker {
 
-    public ScheduleMaker(List<Student> group1, List<Student> group2, List<Student> group3, List<Student> group4) {
+    private final Group group1;
+    private final Group group2;
+    private final Group group3;
+    private final Group group4;
+
+    public ScheduleMaker(Group group1, Group group2, Group group3, Group group4) {
         this.group1 = group1;
         this.group2 = group2;
         this.group3 = group3;
         this.group4 = group4;
     }
     public ScheduleMaker() {
-        group1 = new ArrayList<>();
-        group2 = new ArrayList<>();
-        group3 = new ArrayList<>();
-        group4 = new ArrayList<>();
+        group1 = new Group(1);
+        group2 = new Group(2);
+        group3 = new Group(3);
+        group4 = new Group(4);
     }
 
     public void createGroups(List<Student> classRoll) {

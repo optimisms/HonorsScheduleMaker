@@ -13,10 +13,10 @@ public class Main {
 
         ScheduleMaker mySchedule;
         if (args[1].equals("sorted")) {
-            List<Student> group1 = createGroup(sc.nextLine());
-            List<Student> group2 = createGroup(sc.nextLine());
-            List<Student> group3 = createGroup(sc.nextLine());
-            List<Student> group4 = createGroup(sc.nextLine());
+            Group group1 = createGroup(sc.nextLine(), 1);
+            Group group2 = createGroup(sc.nextLine(), 2);
+            Group group3 = createGroup(sc.nextLine(), 3);
+            Group group4 = createGroup(sc.nextLine(), 4);
 
             mySchedule = new ScheduleMaker(group1, group2, group3, group4);
         }
@@ -38,11 +38,11 @@ public class Main {
         return classRoll;
     }
 
-    private static List<Student> createGroup(String nextLine) {
+    private static Group createGroup(String nextLine, int groupNum) {
         Scanner sc = new Scanner(nextLine);
         sc.next();
         sc.next();
-        List<Student> students = new ArrayList<>();
+        Group students = new Group(groupNum);
         while (sc.hasNext()) {
             String firstName = sc.next();
             String lastName = sc.next();
