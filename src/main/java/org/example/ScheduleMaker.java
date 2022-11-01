@@ -5,11 +5,6 @@ import java.util.List;
 import java.util.Random;
 
 public class ScheduleMaker {
-    enum GroupNum { ONE, TWO, THREE, FOUR }
-    private final List<Student> group1;
-    private final List<Student> group2;
-    private final List<Student> group3;
-    private final List<Student> group4;
 
     public ScheduleMaker(List<Student> group1, List<Student> group2, List<Student> group3, List<Student> group4) {
         this.group1 = group1;
