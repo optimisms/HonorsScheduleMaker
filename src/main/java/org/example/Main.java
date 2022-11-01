@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.GroupCreation.Group;
+import org.example.GroupCreation.Student;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;

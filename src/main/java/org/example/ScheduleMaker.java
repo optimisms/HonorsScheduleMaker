@@ -1,5 +1,9 @@
 package org.example;
 
+import org.example.GroupCreation.Group;
+import org.example.GroupCreation.GroupNum;
+import org.example.GroupCreation.Student;
+
 import java.util.List;
 
 public class ScheduleMaker {

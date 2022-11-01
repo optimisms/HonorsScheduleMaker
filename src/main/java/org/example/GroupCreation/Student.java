@@ -1,4 +1,4 @@
-package org.example;
+package org.example.GroupCreation;
 
 public class Student implements Comparable<String> {
     private final String firstName;

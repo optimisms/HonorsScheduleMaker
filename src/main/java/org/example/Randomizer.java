@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.GroupCreation.GroupNum;
+
 import java.util.Random;
 
 public class Randomizer {

@@ -1,4 +1,6 @@
-package org.example;
+package org.example.DigitalDialogues;
+
+import org.example.GroupCreation.GroupNum;
 
 import java.util.ArrayList;
 import java.util.Arrays;

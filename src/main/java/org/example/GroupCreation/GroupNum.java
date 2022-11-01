@@ -1,4 +1,4 @@
-package org.example;
+package org.example.GroupCreation;
 
 public enum GroupNum {
     ONE, TWO, THREE, FOUR;

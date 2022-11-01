@@ -1,4 +1,7 @@
-package org.example;
+package org.example.DigitalDialogues;
+
+import org.example.GroupCreation.GroupNum;
+import org.example.Randomizer;
 
 public class Week {
     Day tuesday;
