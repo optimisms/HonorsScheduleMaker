@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.List;
-import java.util.Random;
 
 public class ScheduleMaker {
 
@@ -29,7 +28,7 @@ public class ScheduleMaker {
 
             GroupNum groupNum = null;
             while (groupNum == null || groupIsFull(groupNum, maxNumMembers)) {
-                groupNum = newRandomGroupNum();
+                groupNum = Randomizer.newRandomGroupNum();
             }
 
             switch (groupNum) {
@@ -39,17 +38,6 @@ public class ScheduleMaker {
                 case FOUR -> group4.add(student);
             }
         }
-    }
-
-    private GroupNum newRandomGroupNum() {
-        int rand = new Random().nextInt(1, 5);
-
-        return switch (rand) {
-            default -> GroupNum.ONE;
-            case 2 -> GroupNum.TWO;
-            case 3 -> GroupNum.THREE;
-            case 4 -> GroupNum.FOUR;
-        };
     }
 
     private boolean groupIsFull(GroupNum groupNum, int maxNumMembers) {
