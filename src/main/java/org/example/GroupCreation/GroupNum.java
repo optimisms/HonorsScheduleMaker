@@ -11,4 +11,13 @@ public enum GroupNum {
             case 4 -> GroupNum.FOUR;
         };
     }
+
+    public static int parseToInt(GroupNum toParse) {
+        return switch (toParse) {
+            default -> 1;
+            case TWO -> 2;
+            case THREE -> 3;
+            case FOUR -> 4;
+        };
+    }
 }

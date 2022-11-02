@@ -1,10 +1,12 @@
 package org.example;
 
+import org.example.DigitalDialogues.SemesterType;
 import org.example.GroupCreation.Group;
 import org.example.GroupCreation.Student;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -13,6 +15,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         File studentList = new File(args[0]);
         Scanner sc = new Scanner(studentList);
+        LocalDate startDate = LocalDate.of(2022, 8, 29);
 
         ScheduleMaker mySchedule;
         if (args[1].equals("sorted")) {
@@ -21,10 +24,10 @@ public class Main {
             Group group3 = createGroup(sc.nextLine(), 3);
             Group group4 = createGroup(sc.nextLine(), 4);
 
-            mySchedule = new ScheduleMaker(group1, group2, group3, group4);
+            mySchedule = new ScheduleMaker(group1, group2, group3, group4, SemesterType.FALL, startDate);
         }
         else {// if (args[1].equals("unsorted")) {
-            mySchedule = new ScheduleMaker();
+            mySchedule = new ScheduleMaker(SemesterType.FALL, startDate);
 
             List<Student> classRoll = createStudentList(sc);
             mySchedule.createGroups(classRoll);
